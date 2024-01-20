@@ -35,6 +35,12 @@
 		1053CE302B5BAF2100585A91 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE272B5BAF2100585A91 /* FavouriteButton.swift */; };
 		1053CE312B5BAF2100585A91 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE292B5BAF2100585A91 /* TabBarController.swift */; };
 		1053CE342B5BAF3D00585A91 /* Notification + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE332B5BAF3D00585A91 /* Notification + Extension.swift */; };
+		1053CE372B5BBC2B00585A91 /* JDropDownAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE362B5BBC2B00585A91 /* JDropDownAlert.swift */; };
+		1053CE3A2B5BBD3000585A91 /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE392B5BBD3000585A91 /* AppAlert.swift */; };
+		1053CE3C2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE3B2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift */; };
+		1053CE3E2B5BBEA700585A91 /* AlertUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE3D2B5BBEA700585A91 /* AlertUI.swift */; };
+		1053CE402B5BC33400585A91 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE3F2B5BC33400585A91 /* AlertView.swift */; };
+		40DADA99E38658F266FABE36 /* Pods_HeadHunterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB50A4C3847BEC34EA92864C /* Pods_HeadHunterClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +74,14 @@
 		1053CE272B5BAF2100585A91 /* FavouriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 		1053CE292B5BAF2100585A91 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1053CE332B5BAF3D00585A91 /* Notification + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification + Extension.swift"; sourceTree = "<group>"; };
+		1053CE362B5BBC2B00585A91 /* JDropDownAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDropDownAlert.swift; sourceTree = "<group>"; };
+		1053CE392B5BBD3000585A91 /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
+		1053CE3B2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JDropDownAlert + AppAlert.swift"; sourceTree = "<group>"; };
+		1053CE3D2B5BBEA700585A91 /* AlertUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUI.swift; sourceTree = "<group>"; };
+		1053CE3F2B5BC33400585A91 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		A5CB824B09D12F66A69047D4 /* Pods-HeadHunterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadHunterClone.release.xcconfig"; path = "Target Support Files/Pods-HeadHunterClone/Pods-HeadHunterClone.release.xcconfig"; sourceTree = "<group>"; };
+		CF232A1A5931A49CB1EA52E3 /* Pods-HeadHunterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadHunterClone.debug.xcconfig"; path = "Target Support Files/Pods-HeadHunterClone/Pods-HeadHunterClone.debug.xcconfig"; sourceTree = "<group>"; };
+		DB50A4C3847BEC34EA92864C /* Pods_HeadHunterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadHunterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40DADA99E38658F266FABE36 /* Pods_HeadHunterClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +101,8 @@
 			children = (
 				1053CDE62B5BAE6000585A91 /* HeadHunterClone */,
 				1053CDE52B5BAE6000585A91 /* Products */,
+				E621E014B589CB1F6D4D5BC9 /* Pods */,
+				5168CBAC9BB96E9D20F03028 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +117,7 @@
 		1053CDE62B5BAE6000585A91 /* HeadHunterClone */ = {
 			isa = PBXGroup;
 			children = (
+				1053CE352B5BBC1800585A91 /* Alert */,
 				1053CE322B5BAF3D00585A91 /* Notification */,
 				1053CE1F2B5BAF2100585A91 /* UI */,
 				1053CE182B5BAF1400585A91 /* Storage */,
@@ -128,9 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				1053CE282B5BAF2100585A91 /* TabBarController */,
-				1053CDFD2B5BAEDD00585A91 /* FavouriteVacancyListViewController */,
 				1053CE002B5BAEDD00585A91 /* VacancyListViewController */,
 				1053CE032B5BAEDD00585A91 /* VacancyDetailViewPresenter */,
+				1053CDFD2B5BAEDD00585A91 /* FavouriteVacancyListViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +247,43 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		1053CE352B5BBC1800585A91 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				1053CE382B5BBC3100585A91 /* JDropDownAlert */,
+				1053CE392B5BBD3000585A91 /* AppAlert.swift */,
+				1053CE3D2B5BBEA700585A91 /* AlertUI.swift */,
+				1053CE3F2B5BC33400585A91 /* AlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		1053CE382B5BBC3100585A91 /* JDropDownAlert */ = {
+			isa = PBXGroup;
+			children = (
+				1053CE362B5BBC2B00585A91 /* JDropDownAlert.swift */,
+				1053CE3B2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift */,
+			);
+			path = JDropDownAlert;
+			sourceTree = "<group>";
+		};
+		5168CBAC9BB96E9D20F03028 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB50A4C3847BEC34EA92864C /* Pods_HeadHunterClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E621E014B589CB1F6D4D5BC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF232A1A5931A49CB1EA52E3 /* Pods-HeadHunterClone.debug.xcconfig */,
+				A5CB824B09D12F66A69047D4 /* Pods-HeadHunterClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,9 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1053CDF82B5BAE6100585A91 /* Build configuration list for PBXNativeTarget "HeadHunterClone" */;
 			buildPhases = (
+				75932D813F65F972D25DD979 /* [CP] Check Pods Manifest.lock */,
 				1053CDE02B5BAE6000585A91 /* Sources */,
 				1053CDE12B5BAE6000585A91 /* Frameworks */,
 				1053CDE22B5BAE6000585A91 /* Resources */,
+				B2E3B2BDC3E4D0F8E9337944 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +353,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75932D813F65F972D25DD979 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeadHunterClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2E3B2BDC3E4D0F8E9337944 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeadHunterClone/Pods-HeadHunterClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeadHunterClone/Pods-HeadHunterClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeadHunterClone/Pods-HeadHunterClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1053CDE02B5BAE6000585A91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -305,8 +404,11 @@
 				1053CE112B5BAEFC00585A91 /* Model.swift in Sources */,
 				1053CE1C2B5BAF1400585A91 /* Storage.swift in Sources */,
 				1053CE092B5BAEDD00585A91 /* VacancyListViewController.swift in Sources */,
+				1053CE3A2B5BBD3000585A91 /* AppAlert.swift in Sources */,
 				1053CE2A2B5BAF2100585A91 /* VacancyCell.swift in Sources */,
+				1053CE3C2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift in Sources */,
 				1053CE312B5BAF2100585A91 /* TabBarController.swift in Sources */,
+				1053CE372B5BBC2B00585A91 /* JDropDownAlert.swift in Sources */,
 				1053CE122B5BAEFC00585A91 /* Log.swift in Sources */,
 				1053CE2E2B5BAF2100585A91 /* FavouriteImageView.swift in Sources */,
 				1053CE342B5BAF3D00585A91 /* Notification + Extension.swift in Sources */,
@@ -324,6 +426,8 @@
 				1053CE2D2B5BAF2100585A91 /* FavouriteTrailingAction.swift in Sources */,
 				1053CDEA2B5BAE6000585A91 /* SceneDelegate.swift in Sources */,
 				1053CE1D2B5BAF1400585A91 /* VacancyStorage.swift in Sources */,
+				1053CE402B5BC33400585A91 /* AlertView.swift in Sources */,
+				1053CE3E2B5BBEA700585A91 /* AlertUI.swift in Sources */,
 				1053CE082B5BAEDD00585A91 /* VacancyListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +570,7 @@
 		};
 		1053CDF92B5BAE6100585A91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF232A1A5931A49CB1EA52E3 /* Pods-HeadHunterClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -494,6 +599,7 @@
 		};
 		1053CDFA2B5BAE6100585A91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5CB824B09D12F66A69047D4 /* Pods-HeadHunterClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

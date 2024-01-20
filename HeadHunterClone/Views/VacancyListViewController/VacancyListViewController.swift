@@ -21,6 +21,8 @@ final class VacancyListViewController: UIViewController {
 
     var presenter: IVacancyListPresenter!
     
+    var alert: IAppAlert!
+    
     private var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -87,6 +89,7 @@ extension VacancyListViewController: IVacancyListViewController {
     func updateViewFavourite(indexPath: IndexPath) {
         
         self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        self.alert.success()
         
     }
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftAlertView
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -34,6 +35,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let vacancyListViewController = VacancyListViewController()
         vacancyListViewController.presenter = presenter
+        vacancyListViewController.alert = AlertUI(viewController: vacancyListViewController)
+        vacancyListViewController.alert = SwiftAlertView()
+        vacancyListViewController.alert = JDropDownAlert()
         
         let vacancyListNavigationController = UINavigationController(rootViewController: vacancyListViewController)
         vacancyListNavigationController.tabBarItem = UITabBarItem(title: "Posts", image: UIImage(systemName: "newspaper"), tag: 0)
