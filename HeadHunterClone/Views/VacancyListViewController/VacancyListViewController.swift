@@ -148,18 +148,33 @@ extension VacancyListViewController: UITableViewDelegate {
 
         let vacancy = self.presenter.vacancies[indexPath.row]
         
-        let favouriteTrailingAction = FavouriteTrailingAction()
+        let favouriteTrailingAction = self.trailingAction(vacancy: vacancy)
         
-        let action = favouriteTrailingAction.trailingAction(vacancy: vacancy) { [weak self] in
-            self?.presenter.addToFavourite(vacancy: vacancy)
-        } remove: { [weak self] in
-            self?.presenter.removeFromFavourite(vacancy: vacancy)
-        }
-
-        let config = UISwipeActionsConfiguration(actions: [action])
+        let config = UISwipeActionsConfiguration(actions: [favouriteTrailingAction])
         
         return config
 
+    }
+    
+    private func trailingAction(vacancy: IVacancy) -> UIContextualAction {
+        
+        let isFavourite = self.presenter.isFavourite(vacancy: vacancy)
+        
+        let favouriteTrailingAction: UIContextualAction
+        
+        if isFavourite {
+            favouriteTrailingAction = RemoveFavouriteTrailingAction() { [weak self] in
+                self?.presenter.removeFromFavourite(vacancy: vacancy)
+            }
+        }
+        else {
+            favouriteTrailingAction = AddFavouriteTrailingAction() { [weak self] in
+                self?.presenter.addToFavourite(vacancy: vacancy)
+            }
+        }
+        
+        return favouriteTrailingAction
+        
     }
     
 }

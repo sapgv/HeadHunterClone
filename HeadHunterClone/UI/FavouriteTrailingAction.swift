@@ -7,44 +7,26 @@
 
 import UIKit
 
-protocol IFavouriteTrailingAction: AnyObject {
+final class AddFavouriteTrailingAction: UIContextualAction {
     
-    func trailingAction(vacancy: IVacancy, add: (() -> Void)?, remove: (() -> Void)?) -> UIContextualAction
+    convenience init(_ completion: (() -> Void)?) {
+        self.init(style: .normal, title: "Добавить", handler: { _, _, completionHandler in
+            completion?()
+            completionHandler(true)
+        })
+        self.backgroundColor = .systemGreen
+    }
     
 }
 
-final class FavouriteTrailingAction: IFavouriteTrailingAction {
+final class RemoveFavouriteTrailingAction: UIContextualAction {
     
-    private let storage: IStorage
-    
-    init(storage: IStorage = VacancyStorage.shared) {
-        self.storage = storage
-    }
-    
-    func trailingAction(vacancy: IVacancy, add: (() -> Void)?, remove: (() -> Void)?) -> UIContextualAction {
-        
-        let isFavourite = self.storage.isFavourite(vacancy: vacancy)
-        
-        let style = isFavourite ? UIContextualAction.Style.destructive : .normal
-        
-        let backgroundColor: UIColor = isFavourite ? .systemRed : .systemGreen
-        
-        let text = isFavourite ? "Remove" : "Add"
-        
-        let handler = isFavourite ? remove : add
-        
-        let action = UIContextualAction(style: style, title: text, handler: { action, view, completion in
-            
-            handler?()
-            
-            completion(true)
-            
+    convenience init(_ completion: (() -> Void)?) {
+        self.init(style: .destructive, title: "Удалить", handler: { _, _, completionHandler in
+            completion?()
+            completionHandler(true)
         })
-        
-        action.backgroundColor = backgroundColor
-        
-        return action
-        
+        self.backgroundColor = .systemRed
     }
     
 }

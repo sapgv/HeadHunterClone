@@ -142,13 +142,11 @@ extension FavouriteVacancyListViewController: UITableViewDelegate {
         
         let vacancy = self.presenter.vacancies[indexPath.row]
         
-        let favouriteTrailingAction = FavouriteTrailingAction()
-        
-        let action = favouriteTrailingAction.trailingAction(vacancy: vacancy, add: nil, remove: { [weak self] in
+        let favouriteTrailingAction = RemoveFavouriteTrailingAction() { [weak self] in
             self?.presenter.removeFromFavourite(vacancy: vacancy)
-        })
+        }
         
-        let config = UISwipeActionsConfiguration(actions: [action])
+        let config = UISwipeActionsConfiguration(actions: [favouriteTrailingAction])
         
         return config
         

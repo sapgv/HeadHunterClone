@@ -3,4 +3,70 @@
    uuid = "FA63E7B6-8CCD-4144-83E2-8DEF394D082D"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C94D5B59-0F1B-44BC-9D14-75732C3A931A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeadHunterClone/UI/FavouriteTrailingAction.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B2A25EB-3970-4AEE-B42F-F15EBC26E609"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeadHunterClone/UI/FavouriteTrailingAction.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7B2A25EB-3970-4AEE-B42F-F15EBC26E609 - 9bf22d1c7afdefdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeadHunterClone.RemoveFavouriteTrailingAction.__allocating_init(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; HeadHunterClone.RemoveFavouriteTrailingAction"
+                  moduleName = "HeadHunterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sapogov/Projects/work/HeadHunterClone/HeadHunterClone/UI/FavouriteTrailingAction.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "7B2A25EB-3970-4AEE-B42F-F15EBC26E609 - 9f526d0411a7c53d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIContextualAction, __C.UIView, (Swift.Bool) -&gt; ()) -&gt; () in HeadHunterClone.RemoveFavouriteTrailingAction.init(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; HeadHunterClone.RemoveFavouriteTrailingAction"
+                  moduleName = "HeadHunterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sapogov/Projects/work/HeadHunterClone/HeadHunterClone/UI/FavouriteTrailingAction.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
