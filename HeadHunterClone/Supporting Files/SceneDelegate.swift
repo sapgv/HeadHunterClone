@@ -50,8 +50,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let viewController = VacancyListViewController()
         viewController.presenter = presenter
-        viewController.alert = AlertUI(viewController: viewController)
-        viewController.alert = SwiftAlertView()
         viewController.alert = JDropDownAlert()
         
         let navigationController = UINavigationController(rootViewController: viewController)
@@ -69,6 +67,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let viewController = FavouriteVacancyListViewController()
         viewController.presenter = presenter
+        viewController.alert = JDropDownAlert()
         
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem = UITabBarItem(title: "Favourite", image: UIImage(systemName: "heart.fill"), tag: 1)

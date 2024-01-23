@@ -95,7 +95,7 @@ extension VacancyListViewController: IVacancyListViewController {
     
     func showError(error: Error) {
         
-        print(error)
+        self.alert.error(error)
         
     }
     

@@ -46,8 +46,6 @@
 		1053CE372B5BBC2B00585A91 /* JDropDownAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE362B5BBC2B00585A91 /* JDropDownAlert.swift */; };
 		1053CE3A2B5BBD3000585A91 /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE392B5BBD3000585A91 /* AppAlert.swift */; };
 		1053CE3C2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE3B2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift */; };
-		1053CE3E2B5BBEA700585A91 /* AlertUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE3D2B5BBEA700585A91 /* AlertUI.swift */; };
-		1053CE402B5BC33400585A91 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CE3F2B5BC33400585A91 /* AlertView.swift */; };
 		40DADA99E38658F266FABE36 /* Pods_HeadHunterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB50A4C3847BEC34EA92864C /* Pods_HeadHunterClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,8 +91,6 @@
 		1053CE362B5BBC2B00585A91 /* JDropDownAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDropDownAlert.swift; sourceTree = "<group>"; };
 		1053CE392B5BBD3000585A91 /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		1053CE3B2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JDropDownAlert + AppAlert.swift"; sourceTree = "<group>"; };
-		1053CE3D2B5BBEA700585A91 /* AlertUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUI.swift; sourceTree = "<group>"; };
-		1053CE3F2B5BC33400585A91 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		A5CB824B09D12F66A69047D4 /* Pods-HeadHunterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadHunterClone.release.xcconfig"; path = "Target Support Files/Pods-HeadHunterClone/Pods-HeadHunterClone.release.xcconfig"; sourceTree = "<group>"; };
 		CF232A1A5931A49CB1EA52E3 /* Pods-HeadHunterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadHunterClone.debug.xcconfig"; path = "Target Support Files/Pods-HeadHunterClone/Pods-HeadHunterClone.debug.xcconfig"; sourceTree = "<group>"; };
 		DB50A4C3847BEC34EA92864C /* Pods_HeadHunterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadHunterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,8 +304,6 @@
 			children = (
 				1053CE382B5BBC3100585A91 /* JDropDownAlert */,
 				1053CE392B5BBD3000585A91 /* AppAlert.swift */,
-				1053CE3D2B5BBEA700585A91 /* AlertUI.swift */,
-				1053CE3F2B5BC33400585A91 /* AlertView.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -490,8 +484,6 @@
 				1053CE2D2B5BAF2100585A91 /* FavouriteTrailingAction.swift in Sources */,
 				1053CDEA2B5BAE6000585A91 /* SceneDelegate.swift in Sources */,
 				1053CE1D2B5BAF1400585A91 /* VacancyStorage.swift in Sources */,
-				1053CE402B5BC33400585A91 /* AlertView.swift in Sources */,
-				1053CE3E2B5BBEA700585A91 /* AlertUI.swift in Sources */,
 				1053CE082B5BAEDD00585A91 /* VacancyListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

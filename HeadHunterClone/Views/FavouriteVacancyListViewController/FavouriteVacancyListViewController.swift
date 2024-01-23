@@ -19,6 +19,8 @@ final class FavouriteVacancyListViewController: UIViewController {
     
     var presenter: IFavouriteVacancyListPresenter!
     
+    var alert: IAppAlert!
+    
     private var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -102,7 +104,7 @@ extension FavouriteVacancyListViewController: IFavouriteVacancyListViewControlle
     
     func showError(error: Error) {
         
-        print(error)
+        self.alert.error(error)
         
     }
     
