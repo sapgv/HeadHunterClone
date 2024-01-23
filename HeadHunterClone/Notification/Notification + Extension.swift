@@ -10,5 +10,6 @@ import Foundation
 extension Notification.Name {
     
     static let favouritesDidChange = Notification.Name("favouritesDidChange")
+    static let solaryPerHourDidChange = Notification.Name("solaryPerHourDidChange")
     
 }

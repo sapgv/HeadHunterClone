@@ -19,6 +19,8 @@ protocol IFavouriteVacancyListPresenter: AnyObject {
     
     func removeFromFavourite(vacancy: IVacancy)
     
+    func solaryTitle(vacancy: IVacancy) -> String
+    
 }
 
 final class FavouriteVacancyListPresenter: IFavouriteVacancyListPresenter {
@@ -31,9 +33,13 @@ final class FavouriteVacancyListPresenter: IFavouriteVacancyListPresenter {
     
     private let storage: IStorage
     
-    init(storage: IStorage = VacancyStorage.shared) {
+    private var solaryPresenter: ISolaryPresenter
+    
+    init(storage: IStorage = VacancyStorage.shared,
+         solaryPresenter: ISolaryPresenter) {
         self.storage = storage
-        NotificationCenter.default.addObserver(self, selector: #selector(favouritesDidChange), name: .favouritesDidChange, object: nil)
+        self.solaryPresenter = solaryPresenter
+        self.setupNotification()
     }
     
     deinit {
@@ -76,11 +82,44 @@ final class FavouriteVacancyListPresenter: IFavouriteVacancyListPresenter {
         
     }
     
-    //MARK: - Private
+    func solaryTitle(vacancy: IVacancy) -> String {
+        
+        let value = self.solaryPresenter.string(vacancy.solary)
+        return value
+        
+    }
+    
+}
+
+//MARK: - Notification
+
+extension FavouriteVacancyListPresenter {
+    
+    private func setupNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(favouritesDidChange), name: .favouritesDidChange, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(solaryPerHourDidChange), name: .solaryPerHourDidChange, object: nil)
+    }
     
     @objc
     private func favouritesDidChange() {
         self.favouritesNeedUpdate = true
+    }
+    
+    @objc
+    private func solaryPerHourDidChange() {
+        self.solaryPresenter = self.createSolaryPresenter()
+        self.view?.updateView()
+    }
+    
+    private func createSolaryPresenter() -> ISolaryPresenter {
+        
+        if SettingsStorage.shared.solaryPerHour {
+            return SolaryHourPresenter()
+        }
+        
+        return SolaryPresenter()
+        
     }
     
 }
