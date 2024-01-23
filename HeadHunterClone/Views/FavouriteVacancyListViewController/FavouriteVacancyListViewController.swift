@@ -121,9 +121,9 @@ extension FavouriteVacancyListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "VacancyCell", for: indexPath) as? VacancyCell else { return UITableViewCell() }
         
         let vacancy = self.presenter.vacancies[indexPath.row]
-        
+
         let solaryTitle = self.presenter.solaryTitle(vacancy: vacancy)
-        
+
         cell.setup(vacancy: vacancy, solaryTitle: solaryTitle)
         
         return cell

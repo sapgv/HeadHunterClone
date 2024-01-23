@@ -29,7 +29,11 @@ final class SolaryHourPresenter: ISolaryPresenter {
     
     private let formatter = SolaryFormatter()
     
-    private let hoursPerMonth = 160
+    private let hoursPerMonth: Int
+    
+    init(hoursPerMonth: Int = 160) {
+        self.hoursPerMonth = hoursPerMonth
+    }
     
     func string(_ solary: Int) -> String {
         let hourSolary = solary / self.hoursPerMonth

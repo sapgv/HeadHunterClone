@@ -13,7 +13,6 @@
 		101C014B2B5FB9FA00F2D93A /* SettingsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C014A2B5FB9FA00F2D93A /* SettingsViewPresenter.swift */; };
 		101C014E2B5FBA9300F2D93A /* SettingsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C014C2B5FBA9300F2D93A /* SettingsSwitchCell.swift */; };
 		101C014F2B5FBA9300F2D93A /* SettingsSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101C014D2B5FBA9300F2D93A /* SettingsSwitchCell.xib */; };
-		101C01532B5FC41E00F2D93A /* UserDefaults + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C01522B5FC41E00F2D93A /* UserDefaults + Extensions.swift */; };
 		101C01582B5FCD2F00F2D93A /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C01572B5FCD2F00F2D93A /* SettingsStorage.swift */; };
 		1053CDE82B5BAE6000585A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CDE72B5BAE6000585A91 /* AppDelegate.swift */; };
 		1053CDEA2B5BAE6000585A91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CDE92B5BAE6000585A91 /* SceneDelegate.swift */; };
@@ -56,7 +55,6 @@
 		101C014A2B5FB9FA00F2D93A /* SettingsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewPresenter.swift; sourceTree = "<group>"; };
 		101C014C2B5FBA9300F2D93A /* SettingsSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchCell.swift; sourceTree = "<group>"; };
 		101C014D2B5FBA9300F2D93A /* SettingsSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSwitchCell.xib; sourceTree = "<group>"; };
-		101C01522B5FC41E00F2D93A /* UserDefaults + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extensions.swift"; sourceTree = "<group>"; };
 		101C01572B5FCD2F00F2D93A /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
 		1053CDE42B5BAE6000585A91 /* HeadHunterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadHunterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1053CDE72B5BAE6000585A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 		101C01512B5FC40C00F2D93A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				101C01522B5FC41E00F2D93A /* UserDefaults + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,7 +471,6 @@
 				1053CE0A2B5BAEDD00585A91 /* VacancyDetailViewPresenter.swift in Sources */,
 				1053CE072B5BAEDD00585A91 /* FavouriteVacancyListViewController.swift in Sources */,
 				1053CDE82B5BAE6000585A91 /* AppDelegate.swift in Sources */,
-				101C01532B5FC41E00F2D93A /* UserDefaults + Extensions.swift in Sources */,
 				101C01582B5FCD2F00F2D93A /* SettingsStorage.swift in Sources */,
 				101C01442B5FB60700F2D93A /* SolaryPresenter.swift in Sources */,
 				1053CE062B5BAEDD00585A91 /* FavouriteVacancyListPresenter.swift in Sources */,
