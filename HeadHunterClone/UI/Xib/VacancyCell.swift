@@ -27,10 +27,10 @@ class VacancyCell: UITableViewCell {
         self.favouriteImageView.isHidden = true
     }
     
-    func setup(vacancy: IVacancy) {
+    func setup(vacancy: IVacancy, solaryTitle: String) {
         self.titleLabel.text = vacancy.title
         self.bodyLabel.text = vacancy.body
-        self.solaryLabel.text = vacancy.solary
+        self.solaryLabel.text = solaryTitle
     }
     
     func setup(isFavourite: Bool) {

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101C01442B5FB60700F2D93A /* SolaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C01432B5FB60700F2D93A /* SolaryPresenter.swift */; };
+		101C01462B5FB68900F2D93A /* SolaryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C01452B5FB68900F2D93A /* SolaryFormatter.swift */; };
+		101C01482B5FB94700F2D93A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C01472B5FB94700F2D93A /* SettingsViewController.swift */; };
+		101C014B2B5FB9FA00F2D93A /* SettingsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C014A2B5FB9FA00F2D93A /* SettingsViewPresenter.swift */; };
+		101C014E2B5FBA9300F2D93A /* SettingsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C014C2B5FBA9300F2D93A /* SettingsSwitchCell.swift */; };
+		101C014F2B5FBA9300F2D93A /* SettingsSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101C014D2B5FBA9300F2D93A /* SettingsSwitchCell.xib */; };
+		101C01532B5FC41E00F2D93A /* UserDefaults + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C01522B5FC41E00F2D93A /* UserDefaults + Extensions.swift */; };
+		101C01582B5FCD2F00F2D93A /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C01572B5FCD2F00F2D93A /* SettingsStorage.swift */; };
 		1053CDE82B5BAE6000585A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CDE72B5BAE6000585A91 /* AppDelegate.swift */; };
 		1053CDEA2B5BAE6000585A91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053CDE92B5BAE6000585A91 /* SceneDelegate.swift */; };
 		1053CDEF2B5BAE6000585A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1053CDED2B5BAE6000585A91 /* Main.storyboard */; };
@@ -44,6 +52,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		101C01432B5FB60700F2D93A /* SolaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolaryPresenter.swift; sourceTree = "<group>"; };
+		101C01452B5FB68900F2D93A /* SolaryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolaryFormatter.swift; sourceTree = "<group>"; };
+		101C01472B5FB94700F2D93A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		101C014A2B5FB9FA00F2D93A /* SettingsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewPresenter.swift; sourceTree = "<group>"; };
+		101C014C2B5FBA9300F2D93A /* SettingsSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchCell.swift; sourceTree = "<group>"; };
+		101C014D2B5FBA9300F2D93A /* SettingsSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSwitchCell.xib; sourceTree = "<group>"; };
+		101C01522B5FC41E00F2D93A /* UserDefaults + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extensions.swift"; sourceTree = "<group>"; };
+		101C01572B5FCD2F00F2D93A /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
 		1053CDE42B5BAE6000585A91 /* HeadHunterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadHunterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1053CDE72B5BAE6000585A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1053CDE92B5BAE6000585A91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +112,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		101C01492B5FB94B00F2D93A /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				101C014A2B5FB9FA00F2D93A /* SettingsViewPresenter.swift */,
+				101C01472B5FB94700F2D93A /* SettingsViewController.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		101C01502B5FC30500F2D93A /* VacancyStorage */ = {
+			isa = PBXGroup;
+			children = (
+				1053CE192B5BAF1400585A91 /* Storage.swift */,
+				1053CE1A2B5BAF1400585A91 /* VacancyStorage.swift */,
+			);
+			path = VacancyStorage;
+			sourceTree = "<group>";
+		};
+		101C01512B5FC40C00F2D93A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				101C01522B5FC41E00F2D93A /* UserDefaults + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		101C01562B5FCD2200F2D93A /* SettingsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				101C01572B5FCD2F00F2D93A /* SettingsStorage.swift */,
+			);
+			path = SettingsStorage;
+			sourceTree = "<group>";
+		};
 		1053CDDB2B5BAE6000585A91 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +167,7 @@
 		1053CDE62B5BAE6000585A91 /* HeadHunterClone */ = {
 			isa = PBXGroup;
 			children = (
+				101C01512B5FC40C00F2D93A /* Extensions */,
 				1053CE352B5BBC1800585A91 /* Alert */,
 				1053CE322B5BAF3D00585A91 /* Notification */,
 				1053CE1F2B5BAF2100585A91 /* UI */,
@@ -149,6 +200,7 @@
 				1053CE002B5BAEDD00585A91 /* VacancyListViewController */,
 				1053CE032B5BAEDD00585A91 /* VacancyDetailViewPresenter */,
 				1053CDFD2B5BAEDD00585A91 /* FavouriteVacancyListViewController */,
+				101C01492B5FB94B00F2D93A /* SettingsViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +239,8 @@
 				1053CE0E2B5BAEFC00585A91 /* Log.swift */,
 				1053CE0F2B5BAEFC00585A91 /* Vacancy.swift */,
 				1053CE102B5BAEFC00585A91 /* Vacancy + Data.swift */,
+				101C01432B5FB60700F2D93A /* SolaryPresenter.swift */,
+				101C01452B5FB68900F2D93A /* SolaryFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,9 +256,9 @@
 		1053CE182B5BAF1400585A91 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				1053CE192B5BAF1400585A91 /* Storage.swift */,
-				1053CE1A2B5BAF1400585A91 /* VacancyStorage.swift */,
 				1053CE1B2B5BAF1400585A91 /* StorageError.swift */,
+				101C01562B5FCD2200F2D93A /* SettingsStorage */,
+				101C01502B5FC30500F2D93A /* VacancyStorage */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -227,6 +281,8 @@
 			children = (
 				1053CE212B5BAF2100585A91 /* VacancyCell.swift */,
 				1053CE222B5BAF2100585A91 /* VacancyCell.xib */,
+				101C014C2B5FBA9300F2D93A /* SettingsSwitchCell.swift */,
+				101C014D2B5FBA9300F2D93A /* SettingsSwitchCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -347,6 +403,7 @@
 				1053CDF42B5BAE6100585A91 /* LaunchScreen.storyboard in Resources */,
 				1053CE2B2B5BAF2100585A91 /* VacancyCell.xib in Resources */,
 				1053CDF12B5BAE6100585A91 /* Assets.xcassets in Resources */,
+				101C014F2B5FBA9300F2D93A /* SettingsSwitchCell.xib in Resources */,
 				1053CDEF2B5BAE6000585A91 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +463,10 @@
 				1053CE092B5BAEDD00585A91 /* VacancyListViewController.swift in Sources */,
 				1053CE3A2B5BBD3000585A91 /* AppAlert.swift in Sources */,
 				1053CE2A2B5BAF2100585A91 /* VacancyCell.swift in Sources */,
+				101C014E2B5FBA9300F2D93A /* SettingsSwitchCell.swift in Sources */,
 				1053CE3C2B5BBE0300585A91 /* JDropDownAlert + AppAlert.swift in Sources */,
+				101C01482B5FB94700F2D93A /* SettingsViewController.swift in Sources */,
+				101C014B2B5FB9FA00F2D93A /* SettingsViewPresenter.swift in Sources */,
 				1053CE312B5BAF2100585A91 /* TabBarController.swift in Sources */,
 				1053CE372B5BBC2B00585A91 /* JDropDownAlert.swift in Sources */,
 				1053CE122B5BAEFC00585A91 /* Log.swift in Sources */,
@@ -420,9 +480,13 @@
 				1053CE0A2B5BAEDD00585A91 /* VacancyDetailViewPresenter.swift in Sources */,
 				1053CE072B5BAEDD00585A91 /* FavouriteVacancyListViewController.swift in Sources */,
 				1053CDE82B5BAE6000585A91 /* AppDelegate.swift in Sources */,
+				101C01532B5FC41E00F2D93A /* UserDefaults + Extensions.swift in Sources */,
+				101C01582B5FCD2F00F2D93A /* SettingsStorage.swift in Sources */,
+				101C01442B5FB60700F2D93A /* SolaryPresenter.swift in Sources */,
 				1053CE062B5BAEDD00585A91 /* FavouriteVacancyListPresenter.swift in Sources */,
 				1053CE1E2B5BAF1400585A91 /* StorageError.swift in Sources */,
 				1053CE2F2B5BAF2100585A91 /* DetailTitleLabel.swift in Sources */,
+				101C01462B5FB68900F2D93A /* SolaryFormatter.swift in Sources */,
 				1053CE2D2B5BAF2100585A91 /* FavouriteTrailingAction.swift in Sources */,
 				1053CDEA2B5BAE6000585A91 /* SceneDelegate.swift in Sources */,
 				1053CE1D2B5BAF1400585A91 /* VacancyStorage.swift in Sources */,

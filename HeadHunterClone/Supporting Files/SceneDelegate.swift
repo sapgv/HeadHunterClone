@@ -29,33 +29,75 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func createViewController() -> UIViewController {
         
-        //Vacancies
-
-        let presenter = VacancyListPresenter()
-
-        let vacancyListViewController = VacancyListViewController()
-        vacancyListViewController.presenter = presenter
-        vacancyListViewController.alert = AlertUI(viewController: vacancyListViewController)
-        vacancyListViewController.alert = SwiftAlertView()
-        vacancyListViewController.alert = JDropDownAlert()
+        let vacancyListViewController = self.createVacancyListViewController()
         
-        let vacancyListNavigationController = UINavigationController(rootViewController: vacancyListViewController)
-        vacancyListNavigationController.tabBarItem = UITabBarItem(title: "Posts", image: UIImage(systemName: "newspaper"), tag: 0)
+        let favouriteListViewController = self.createFavouriteVacancyListViewController()
         
-        //Favourite
-        
-        let favouriteVacancyListPresenter = FavouriteVacancyListPresenter()
-        
-        let favouriteVacancyListViewController = FavouriteVacancyListViewController()
-        favouriteVacancyListViewController.presenter = favouriteVacancyListPresenter
-        
-        let favouriteVacancyListNavigationController = UINavigationController(rootViewController: favouriteVacancyListViewController)
-        favouriteVacancyListNavigationController.tabBarItem = UITabBarItem(title: "Favourite", image: UIImage(systemName: "heart.fill"), tag: 1)
+        let settingsViewController = self.createSettingsViewController()
         
         let tabBarViewController = TabBarController()
-        tabBarViewController.setViewControllers([vacancyListNavigationController, favouriteVacancyListNavigationController], animated: false)
+        tabBarViewController.setViewControllers([vacancyListViewController, favouriteListViewController, settingsViewController], animated: false)
         
         return tabBarViewController
+        
+    }
+    
+    private func createVacancyListViewController() -> UIViewController {
+        
+        let solaryPresenter = self.createSolaryPresenter()
+        
+        let presenter = VacancyListPresenter(solaryPresenter: solaryPresenter)
+
+        let viewController = VacancyListViewController()
+        viewController.presenter = presenter
+        viewController.alert = AlertUI(viewController: viewController)
+        viewController.alert = SwiftAlertView()
+        viewController.alert = JDropDownAlert()
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.tabBarItem = UITabBarItem(title: "Posts", image: UIImage(systemName: "newspaper"), tag: 0)
+        
+        return navigationController
+        
+    }
+    
+    private func createFavouriteVacancyListViewController() -> UIViewController {
+        
+        let solaryPresenter = self.createSolaryPresenter()
+        
+        let presenter = FavouriteVacancyListPresenter(solaryPresenter: solaryPresenter)
+        
+        let viewController = FavouriteVacancyListViewController()
+        viewController.presenter = presenter
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.tabBarItem = UITabBarItem(title: "Favourite", image: UIImage(systemName: "heart.fill"), tag: 1)
+        
+        return navigationController
+        
+    }
+    
+    private func createSettingsViewController() -> UIViewController {
+        
+        let presenter = SettingsViewPresenter()
+        
+        let viewController = SettingsViewController()
+        viewController.presenter = presenter
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 2)
+        
+        return navigationController
+        
+    }
+    
+    private func createSolaryPresenter() -> ISolaryPresenter {
+        
+        if SettingsStorage.shared.solaryPerHour {
+            return SolaryHourPresenter()
+        }
+        
+        return SolaryPresenter()
         
     }
 

@@ -15,7 +15,7 @@ protocol IVacancy: Codable {
     
     var body: String { get }
     
-    var solary: String { get }
+    var solary: Int { get }
     
     init(data: [String: Any])
     
@@ -37,9 +37,9 @@ final class Vacancy: IVacancy, Codable, Hashable {
     
     let body: String
     
-    var solary: String
+    var solary: Int
     
-    init(id: Int, title: String, body: String, solary: String) {
+    init(id: Int, title: String, body: String, solary: Int) {
         self.id = id
         self.title = title
         self.body = body
@@ -50,7 +50,7 @@ final class Vacancy: IVacancy, Codable, Hashable {
         self.id = data["id"] as? Int ?? 0
         self.title = data["title"] as? String ?? ""
         self.body = data["body"] as? String ?? ""
-        self.solary = data["solary"] as? String ?? ""
+        self.solary = data["solary"] as? Int ?? 0
     }
     
 }

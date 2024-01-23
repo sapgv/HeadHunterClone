@@ -23,6 +23,8 @@ protocol IVacancyListPresenter: AnyObject {
     
     func isFavourite(vacancy: IVacancy) -> Bool
     
+    func solaryTitle(vacancy: IVacancy) -> String
+    
 }
 
 final class VacancyListPresenter: IVacancyListPresenter {
@@ -35,10 +37,19 @@ final class VacancyListPresenter: IVacancyListPresenter {
     
     private let storage: IStorage
     
+    private var solaryPresenter: ISolaryPresenter
+    
     init(api: IApi = Api(),
-         storage: IStorage = VacancyStorage.shared) {
+         storage: IStorage = VacancyStorage.shared,
+         solaryPresenter: ISolaryPresenter) {
         self.api = api
         self.storage = storage
+        self.solaryPresenter = solaryPresenter
+        self.setupNotification()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func update() {
@@ -129,6 +140,39 @@ final class VacancyListPresenter: IVacancyListPresenter {
     func isFavourite(vacancy: IVacancy) -> Bool {
         
         self.storage.isFavourite(vacancy: vacancy)
+        
+    }
+    
+    func solaryTitle(vacancy: IVacancy) -> String {
+        
+        let value = self.solaryPresenter.string(vacancy.solary)
+        return value
+        
+    }
+    
+}
+
+//MARK: - Notification
+
+extension VacancyListPresenter {
+    
+    private func setupNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(solaryPerHourDidChange), name: .solaryPerHourDidChange, object: nil)
+    }
+    
+    @objc
+    private func solaryPerHourDidChange() {
+        self.solaryPresenter = self.createSolaryPresenter()
+        self.view?.updateView()
+    }
+    
+    private func createSolaryPresenter() -> ISolaryPresenter {
+        
+        if SettingsStorage.shared.solaryPerHour {
+            return SolaryHourPresenter()
+        }
+        
+        return SolaryPresenter()
         
     }
     

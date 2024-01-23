@@ -125,7 +125,10 @@ extension VacancyListViewController: UITableViewDataSource {
         
         let isFavourite = self.presenter.isFavourite(vacancy: vacancy)
         
-        cell.setup(vacancy: vacancy)
+        let solaryTitle = self.presenter.solaryTitle(vacancy: vacancy)
+        
+        cell.setup(vacancy: vacancy, solaryTitle: solaryTitle)
+        
         cell.setup(isFavourite: isFavourite)
         
         return cell

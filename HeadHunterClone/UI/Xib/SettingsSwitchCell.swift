@@ -9,15 +9,25 @@ import UIKit
 
 class SettingsSwitchCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var switcher: UISwitch!
+    
+    var completion: ((Bool) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.switcher.addTarget(self, action: #selector(switchAction), for: .valueChanged)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setup(title: String, value: Bool) {
+        self.titleLabel.text = title
+        self.switcher.isOn = value
+    }
+    
+    @objc
+    private func switchAction() {
+        self.completion?(self.switcher.isOn)
     }
     
 }
